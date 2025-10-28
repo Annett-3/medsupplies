@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedSupplies Kenya</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- 🌍 Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="{% url 'home' %}" class="text-2xl font-bold text-blue-700"
+          >MedSupplies</a
+        >
+        <ul class="flex space-x-6 text-gray-700 font-medium">
+          <li>
+            <a href="{% url 'home' %}" class="hover:text-blue-600">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'about' %}" class="hover:text-blue-600">About</a>
+          </li>
+          <li>
+            <a href="{% url 'equipments' %}" class="hover:text-blue-600"
+              >Equipments</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'services' %}" class="hover:text-blue-600"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'staff' %}" class="hover:text-blue-600">Staff</a>
+          </li>
+          <li>
+            <a href="{% url 'testimonials' %}" class="hover:text-blue-600"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'contact' %}" class="hover:text-blue-600">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 📄 Page Content -->
+    <main class="container mx-auto px-4 py-10 min-h-[70vh]">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- 💬 Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4"
+      >
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-3">
+            MedSupplies Kenya
+          </h3>
+          <p>
+            Supplying trusted medical equipment across Kenya. Quality,
+            reliability, and professional service you can depend on.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-3">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="{% url 'home' %}" class="hover:text-white">Home</a>
+            </li>
+            <li>
+              <a href="{% url 'about' %}" class="hover:text-white">About</a>
+            </li>
+            <li>
+              <a href="{% url 'equipments' %}" class="hover:text-white"
+                >Equipments</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'contact' %}" class="hover:text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact & Socials -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-3">Get in Touch</h3>
+          <p>Email: <a href="mailto:Kingsmedicalequipment01@gmail.com" class="hover:text-white">Kingsmedicalequipment01@gmail.com</a></p>
+          <p>Phone: <a href="tel:+254712638166/0746253861" class="hover:text-white">+254 712638166/0746253861</a></p>
+          <p>Location: Nairobi, Kenya</p>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-5 mt-4 text-xl">
+            <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="hover:text-sky-400">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="hover:text-blue-400">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="hover:text-red-500">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
+        © {{ now|date:"Y" }} MedSupplies Kenya — All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>
