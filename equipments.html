@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Medical Equipments</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 50px 10%;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .gallery-item h5 {
+            margin: 15px 0 5px;
+            color: #007bff;
+            font-size: 1.1em;
+        }
+
+        .gallery-item p {
+            font-size: 0.95em;
+            color: #666;
+            padding: 0 10px 20px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Medical Equipments</h1>
+        <p>Explore our wide range of high-quality medical tools and devices for hospitals and clinics.</p>
+    </header>
+
+    <div class="gallery">
+        {% for i in equipment_images %}
+        <div class="gallery-item">
+            <img src="{% static i %}" alt="Medical Equipment {{ forloop.counter }}">
+            <h5>Equipment {{ forloop.counter }}</h5>
+            <p>Reliable and efficient medical equipment for modern healthcare facilities.</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MedSupplies. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

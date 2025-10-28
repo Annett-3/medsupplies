@@ -1,0 +1,99 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+<!-- 🌟 HERO SECTION -->
+<section
+  class="relative bg-cover bg-center rounded-2xl overflow-hidden"
+  style="background-image: url('/static/images/equipment7.jpg'); min-height: 60vh;"
+>
+  <div class="absolute inset-0 bg-blue-900 bg-opacity-70"></div>
+  <div class="relative z-10 text-center text-white px-6 py-24">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+      About KingsMed Medical Supplies
+    </h1>
+    <p class="text-lg md:text-xl max-w-3xl mx-auto">
+      Delivering dependable and innovative medical solutions that empower healthcare facilities to save lives.
+    </p>
+  </div>
+</section>
+
+<!-- 🩺 COMPANY OVERVIEW -->
+<section class="py-16 px-6 md:px-16 text-gray-700">
+  <div class="max-w-5xl mx-auto text-center mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Who We Are</h2>
+    <p class="text-lg leading-relaxed">
+      KingsMed Medical Supplies is a trusted provider of modern medical equipment and healthcare solutions in Kenya.  
+      Established with a passion for improving patient care, we focus on providing reliable, durable, and affordable medical equipment for hospitals, clinics, and laboratories across the region.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div>
+      <img
+        src="{% static 'images/equipment10.jpg' %}"
+        alt="Medical Equipment"
+        class="rounded-2xl shadow-lg"
+      />
+    </div>
+    <div>
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
+      <p class="text-gray-600 mb-6">
+        To enhance the quality of healthcare delivery by supplying modern, affordable, and efficient medical equipment that healthcare professionals can trust.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h3>
+      <p class="text-gray-600 mb-6">
+        To become East Africa’s leading provider of world-class medical and laboratory solutions — empowering institutions through innovation, technology, and service excellence.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 💎 CORE VALUES -->
+<section class="bg-blue-50 py-16 rounded-2xl">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-gray-800">Our Core Values</h2>
+    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">
+      The pillars that define how we serve our partners and clients.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-20 text-center">
+    <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+      <i class="fas fa-handshake text-4xl text-blue-600 mb-4"></i>
+      <h3 class="font-semibold text-gray-800 mb-2">Integrity</h3>
+      <p class="text-gray-600 text-sm">We build trust through transparency and honesty in all our operations.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+      <i class="fas fa-cogs text-4xl text-blue-600 mb-4"></i>
+      <h3 class="font-semibold text-gray-800 mb-2">Innovation</h3>
+      <p class="text-gray-600 text-sm">We embrace modern technology to provide cutting-edge medical solutions.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+      <i class="fas fa-heartbeat text-4xl text-blue-600 mb-4"></i>
+      <h3 class="font-semibold text-gray-800 mb-2">Commitment</h3>
+      <p class="text-gray-600 text-sm">Dedicated to serving healthcare professionals with consistency and care.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+      <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+      <h3 class="font-semibold text-gray-800 mb-2">Customer Focus</h3>
+      <p class="text-gray-600 text-sm">We prioritize the satisfaction and needs of every healthcare facility we serve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 👨‍⚕️ CTA SECTION -->
+<section class="mt-20 bg-blue-700 text-white py-14 text-center rounded-2xl shadow-md">
+  <h2 class="text-3xl font-bold mb-4">Partner with KingsMed Today</h2>
+  <p class="text-lg mb-6">Join hundreds of satisfied healthcare institutions across Kenya who trust our solutions.</p>
+  <a
+    href="{% url 'contact' %}"
+    class="bg-white text-blue-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+  >
+    Get in Touch
+  </a>
+</section>
+{% endblock %}
