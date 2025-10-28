@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+  /* === SERVICES PAGE STYLING === */
+  .services-section {
+    background-color: #f9fbfd;
+    padding: 80px 0;
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .services-header h2 {
+    font-weight: 700;
+    color: #007bff;
+  }
+
+  .services-header p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    height: 100%;
+    text-align: center;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+
+  .service-card h4 {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+  }
+
+  .service-card p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+</style>
+
+<section class="services-section">
+  <div class="container">
+    <div class="services-header">
+      <h2>Our Services</h2>
+      <p>Delivering excellence and reliability in every medical equipment solution we provide.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <h4>Medical Equipment Supply</h4>
+          <p>
+            We supply a wide range of modern medical and laboratory equipment sourced from globally trusted brands. Our goal is to equip healthcare providers with reliable and efficient tools for patient care.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h4>Servicing & Maintenance</h4>
+          <p>
+            Our technical team offers regular maintenance and repair services to ensure your equipment remains in peak working condition, minimizing downtime and maximizing performance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <h4>Training & Technical Support</h4>
+          <p>
+            We provide user training and ongoing technical support for all equipment supplied, empowering your medical staff with the knowledge to operate safely and efficiently.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h4>Delivery & Installation</h4>
+          <p>
+            We offer timely delivery and professional installation services to ensure all medical equipment is properly set up and ready for use right away.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4>Consultation & Procurement</h4>
+          <p>
+            Our experts assist healthcare institutions in identifying, selecting, and procuring the right equipment that meets their needs and budget.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-warehouse"></i>
+          </div>
+          <h4>Inventory & Supply Chain Management</h4>
+          <p>
+            We manage inventory systems and ensure a steady supply of essential medical devices and consumables, helping healthcare facilities run smoothly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

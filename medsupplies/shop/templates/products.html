@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Our Products</h1>
+    <div class="products-container">
+        {% for product in products %}
+        <div class="product-card">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/default-product.jpg' %}{% endif %}" alt="{{ product.name }}">
+            <h2>{{ product.name }}</h2>
+            <p>Price: ${{ product.price }}</p>
+            <p>{{ product.description }}</p>
+        </div>
+        {% empty %}
+        <p>No products available at the moment.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <div class="container text-center py-5">
+    <h1>Welcome to KingsMed Equipment Medical Supply</h1>
+    <p>Your trusted partner in quality and affordable medical equipment solutions.</p>
+    <a href="{% url 'equipments' %}" class="btn btn-primary">Explore Our Equipment</a>
+  </div>
+</section>
+
+<section class="about mt-5 text-center">
+  <div class="container">
+    <h2>Who We Are</h2>
+    <p>
+      KingsMed Equipment Medical Supply is a reliable provider of modern medical and laboratory equipment
+      to healthcare institutions, clinics, and professionals. We focus on quality, reliability, and service excellence.
+    </p>
+  </div>
+</section>
+{% endblock %}

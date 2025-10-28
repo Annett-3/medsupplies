@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+  /* === ABOUT PAGE STYLING === */
+  .about-section {
+    background: #f8fafc;
+    padding: 80px 0;
+  }
+
+  .about-section h2 {
+    font-weight: 700;
+    color: #007bff;
+  }
+
+  .about-section p {
+    color: #555;
+    line-height: 1.8;
+  }
+
+  .about-img {
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+  }
+
+  .about-img:hover {
+    transform: scale(1.03);
+  }
+
+  .stats-box {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+  }
+
+  .stats-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .stats-box h3 {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+
+  .stats-box p {
+    margin-top: 10px;
+    font-weight: 500;
+  }
+</style>
+
+<section class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text Section -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2>About <span class="text-dark">KingsMed</span></h2>
+        <p class="mt-4">
+          At <strong>KingsMed Medical Equipment Supplies</strong>, we are dedicated to providing world-class medical and healthcare solutions that meet the evolving needs of hospitals, clinics, and laboratories.  
+          <br><br>
+          Established with a vision to improve healthcare accessibility, KingsMed delivers cutting-edge medical equipment, reliable servicing, and continuous technical support to ensure efficiency in healthcare delivery.
+          <br><br>
+          We partner with global brands to supply top-quality medical devices, laboratory instruments, and hospital furniture that empower medical professionals to provide the best patient care possible.
+        </p>
+
+        <a href="{% url 'contact' %}" class="btn btn-primary mt-3 px-4">Contact Us</a>
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-md-6 text-center">
+        <img src="https://via.placeholder.com/500x350" alt="About KingsMed" class="img-fluid about-img">
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="row mt-5 g-4">
+      <div class="col-md-3 col-6">
+        <div class="stats-box">
+          <h3>10+</h3>
+          <p>Years of Experience</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="stats-box">
+          <h3>100+</h3>
+          <p>Partner Facilities</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="stats-box">
+          <h3>500+</h3>
+          <p>Equipment Delivered</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="stats-box">
+          <h3>24/7</h3>
+          <p>Customer Support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

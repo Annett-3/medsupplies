@@ -1,0 +1,42 @@
+{% load static %}
+
+<nav>
+    <div class="logo">
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="KingsMed Logo" height="50"></a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'equipments' %}">Equipments</a></li>
+        <li><a href="{% url 'staff' %}">Staff</a></li>
+        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+</nav>
+
+<style>
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #004080;
+}
+nav .logo img {
+    display: block;
+}
+nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+nav ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+nav ul.nav-links li a:hover {
+    color: #00bfff;
+}
+</style>

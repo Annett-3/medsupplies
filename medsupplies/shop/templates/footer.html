@@ -1,0 +1,40 @@
+{% load static %}
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="{% static 'images/logo.png' %}" alt="KingsMed Logo" height="50">
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2025 KingsMed Equipment Medical Supply. All rights reserved.</p>
+            <p>Email: info@kingsmed.co.ke | Phone: +254 712638166/0746253861</p>
+            <p>Address: 547 Imara daima Mall 2nd floor room 7, Nairobi, Kenya</p>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook" height="25"></a>
+            <a href="#"><img src="{% static 'images/twitter.png' %}" alt="Twitter" height="25"></a>
+            <a href="#"><img src="{% static 'images/instagram.png' %}" alt="instagram" height="25"></a>
+        </div>
+    </div>
+</footer>
+
+<style>
+footer {
+    background-color: #00264d;
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+}
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+footer .footer-info p {
+    margin: 5px 0;
+}
+footer .footer-social a img {
+    margin: 0 10px;
+}
+</style>
